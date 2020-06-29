@@ -14,9 +14,30 @@
     "default": {
       "runner": "@nrwl/workspace/tasks-runners/default",
       "options": {
-        "cacheableOperations": ["build", "lint", "test", "e2e"]
+        "cacheableOperations": [
+          "build",
+          "lint",
+          "test",
+          "e2e"
+        ]
       }
     }
   },
-  "projects": {}
+  "projects": {
+    "api": {
+      "tags": []
+    },
+    "create-client": {
+      "tags": []
+    },
+    "create-client-e2e": {
+      "tags": [],
+      "implicitDependencies": [
+        "create-client"
+      ]
+    },
+    "redis-reader": {
+      "tags": []
+    }
+  }
 }
